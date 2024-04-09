@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Bucles</title>
+</head>
+
+<body>
+    <script>
+        // creo los 100 botones
+        for (let i = 0; i < 100; i++) {
+        // genero el bucle
+            // pinto el boton
+            document.body.innerHTML += "<button>" + i + "</button>";
+        }
+
+        //capturo todos los botones
+        const allButtons = document.querySelectorAll('button');
+
+        //genero otro bucle para que recorra todos los botones
+        for (let i=0; i<allButtons.length; i++) {
+            //creo la funcion de click
+            allButtons[i].addEventListener("click", function () {
+            console.log('Has hecho click en', + i);
+        })
+        }
+
+        
+
+    </script>
+</body>
+
+</html>
